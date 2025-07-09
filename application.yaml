@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: boutique-argo-application
+  namespace: argocd
+spec:
+  project: default
+  
+  source:
+    repoURL: https://github.com/PedroMak/GitOpsStudyWithArgoCD.git
+    targetRevision: HEAD
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true 
