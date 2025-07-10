@@ -63,7 +63,7 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 > [!NOTE]
 > Essa ativação pode ser feita pela UI do ArgoCD, mas como boa prática, especifiquei no arquivo de configuração.
 
-* Após a criação do arquivo, nós fazemos o upload dele e do manifesto do microservices-demo para o nosso repositório.
+* Após a criação do arquivo, nós fazemos o upload dele e do manifesto do `microservices-demo` para o nosso repositório.
 * Em seguida, em nosso terminal, dentro do diretório onde ele se encontra, nós rodamos o comando `kubectl apply -f application.yaml`.
 
 # Visualizando o funcionamento:
@@ -98,3 +98,6 @@ kubectl port-forward svc/frontend 3000:80
 
 * Após realizar o `push` dessa mudança e aguardar alguns minutos, a aplicação foi atualizada e agora possui 3 pods frontend:
 ![new-pods](./images/new-frontend-pods.png)
+#
+### Com isso finalizamos o projeto! 🥳 <br/>
+### Obrigado! 😎
